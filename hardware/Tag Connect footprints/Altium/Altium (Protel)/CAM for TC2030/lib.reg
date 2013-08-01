@@ -1,0 +1,49 @@
+[Directory]
+Status Report.txt=Text
+TC2030.DRR=Text
+TC2030.TXT=Text
+TC2030.DRL=Unknown
+TC2030.REP=Text
+TC2030.GTL=Text
+TC2030.GBL=Text
+TC2030.GTO=Text
+TC2030.GBO=Text
+TC2030.GTP=Text
+TC2030.GBP=Text
+TC2030.GTS=Text
+TC2030.GBS=Text
+TC2030.GD1=Text
+TC2030.GG1=Text
+TC2030.apr=Text
+[Status Report.txt]
+Editor Kind=Text
+[TC2030.DRR]
+Editor Kind=Text
+[TC2030.TXT]
+Editor Kind=Text
+[TC2030.DRL]
+Editor Kind=Unknown
+[TC2030.REP]
+Editor Kind=Text
+[TC2030.GTL]
+Editor Kind=Text
+[TC2030.GBL]
+Editor Kind=Text
+[TC2030.GTO]
+Editor Kind=Text
+[TC2030.GBO]
+Editor Kind=Text
+[TC2030.GTP]
+Editor Kind=Text
+[TC2030.GBP]
+Editor Kind=Text
+[TC2030.GTS]
+Editor Kind=Text
+[TC2030.GBS]
+Editor Kind=Text
+[TC2030.GD1]
+Editor Kind=Text
+[TC2030.GG1]
+Editor Kind=Text
+[TC2030.apr]
+Editor Kind=Text

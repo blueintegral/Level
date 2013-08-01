@@ -1,0 +1,18 @@
+*Change bias tee in directional coupler to the one minicirucits makes (TCBT-14+)
+*Reset button appears to cause short that makes programming unreliable. Change to one with plastic housing.
+*C79 and C80 should be changed to 100 pF
+*Consider adding a buffer amp stage
+*PLL Lock LED still doesn't turn on, even though the VCO appears to be working. Might be a bug (I think the chip errata lists it) or could be something else. The LED comes on in the dev board, so I don't know...
+
+Move the SMA connector away from the ICSP pins on the back of the Arduino
+
+
+Reduce cost
+	-cheaper reset button
+	-cheaper LO
+	-cheaper mixer
+	-cheaper crystal
+	-fewer caps
+
+
+	

@@ -1,0 +1,25 @@
+CAM Outputs Generation Report
+for 'CAMManager1.cam'
+at 12:18:34 on 18-Jun-2009
+
+
+'NC Drill Output 1'
+'TC2030.TXT' generated
+'TC2030.DRL' generated
+'TC2030.DRR' generated
+
+'Gerber Output 1'
+'TC2030.GTL' generated
+'TC2030.GBL' generated
+'TC2030.GTO' generated
+'TC2030.GBO' generated
+'TC2030.GTP' generated
+'TC2030.GBP' generated
+'TC2030.GTS' generated
+'TC2030.GBS' generated
+'TC2030.GD1' generated
+'TC2030.GG1' generated
+'TC2030.REP' generated
+
+
+Total number of generated files = 14

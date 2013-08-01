@@ -1,0 +1,14 @@
+Notes:
+*We're up and downconverting from the 868 MHz band. The CC1101 (which is inside the CC430) can only do 1 MHz of bandwidth, so the VCO must be dynamically changed based on what whitespace channel we're in. As long as we're using the CC1101, we're restricted to 1 MHz bandwidth.
+
+*The values for the VCO balun are experimental. The values in the schematic are guessed based on the table from Analog, and they can probably use a little tweaking experimentally.
+
+*For use with the Arduino, the 3.3V supply comes from the FT232RL and has a 50 mA current limit. The Arduino's 5V line comes straight from the LDO and has a theoretical max current limit of around 800 mA. To generate 3.3V, I added another LDO off of that 5V line which has a max current draw of about an amp. The ADF4351 and CC430 should both consume under that. There's also an auxilary power input to the LDO for testing, so you don't need to be plugged in to an Arduino.
+
+*Communication between important chips is done over SPI. The CC430 is the master SPI device, and the ADF4351 is a slave. The Arduino communication to the CC430 doesn't need to be slave anymore, it can just shovel data over. It's also bidirectional, so the CC430 can return information to the user. Note that communication to the ADF4351 is not bidirectional and is on a seperate physical SPI bus.
+
+*I'd like to use a monolithic filter from minicirucits for the two low pass filters, but they're $3 each. So I'm keeping the discrete LC filters for now. 
+
+*GPIO0/1 can be used as a UART, and they're broken out. So you can dump RS232 over that if we want. SPI should be sufficient though. Actually, there's no reason you can't bit bang RS232 over the pins that are broken out for SPI to the Arduino.
+
+*Right now there's a passive filter to filter out LO harmonics. Its a 7th order Chebyshev (probably overkill). A better option would probably be a discrete filter, like the 0500LP15A500E.Minicircuits makes some that would probably work too.

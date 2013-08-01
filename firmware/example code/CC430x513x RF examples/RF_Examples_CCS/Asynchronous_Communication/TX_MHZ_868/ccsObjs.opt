@@ -1,0 +1,1 @@
+"./HAL/hal_pmm.obj" "./HAL/RfRegSettings_TX.obj" "./HAL/RF1A.obj" "./Asynchronous_comm_TX.obj" -l"libc.a" "../lnk_cc430f5137.cmd" 

@@ -1,0 +1,11 @@
+Please add datasheet parameters:
+ComponentLink1URL: (datasheet_url)
+ComponentLink1Description: Datasheet
+
+Let's keep parts as one block, utilize 'push to sheet' if unwieldy
+
+Set pin inputs / outputs
+
+Create one .schLib per part, helps with version control
+
+Remember to compile, it catches errors

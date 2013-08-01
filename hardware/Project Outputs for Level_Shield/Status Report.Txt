@@ -1,0 +1,11 @@
+Output: PADS ASCII Netlist
+Type  : PADSNetlist
+From  : Project [Level_Shield.PrjPcb]
+   Generated File[Headers.NET]
+   Generated File[Headers.PRT]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 12:40:10 PM On 12/6/2012

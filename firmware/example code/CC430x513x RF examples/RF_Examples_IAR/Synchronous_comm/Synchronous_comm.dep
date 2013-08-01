@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3529549210</fileChecksum>
+  <configuration>
+    <name>RX_MHZ_868</name>
+    <outputs>
+      <file>$PROJ_DIR$\RX_MHZ_868\Exe\Synchronous_comm.d43</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\Synchronous_comm.pbd</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.r43</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\RfRegSettings_RX.r43</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\Synchronous_comm_RX.r43</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\Synchronous_comm_RX.pbi</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\hal_pmm.pbi</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\RfRegSettings_RX.pbi</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\RF1A.pbi</file>
+      <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\hal_pmm.r43</file>
+      <file>$PROJ_DIR$\RX_MHZ_868\Obj\RF1A.r43</file>
+      <file>$TOOLKIT_DIR$\config\lnkCC430F5137.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\cc430f5137.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.c</file>
+      <file>$PROJ_DIR$\HAL\RfRegSettings_RX.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_RX.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_TX.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430x513x.h</file>
+      <file>$PROJ_DIR$\Synchronous_comm.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\RX_MHZ_868\Exe\Synchronous_comm.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 12 9 11 3 4 10 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\RX_MHZ_868\Obj\Synchronous_comm.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 8 7 5 6</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_pmm.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 14 13 21 23 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14 13 21 23 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RfRegSettings_RX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RF1A.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 24 21 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 24 21 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Synchronous_comm_RX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>RX_MHZ_915</name>
+    <outputs>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\RF1A.r43</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\hal_pmm.pbi</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\RfRegSettings_RX.r43</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\RF1A.pbi</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\RfRegSettings_RX.pbi</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\Synchronous_comm_RX.r43</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\hal_pmm.r43</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.r43</file>
+      <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+      <file>$TOOLKIT_DIR$\config\lnkCC430F5137.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\cc430f5137.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\Synchronous_comm_RX.pbi</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Exe\Synchronous_comm.d43</file>
+      <file>$PROJ_DIR$\RX_MHZ_915\Obj\Synchronous_comm.pbd</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.c</file>
+      <file>$PROJ_DIR$\HAL\RfRegSettings_RX.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_RX.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_TX.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430x513x.h</file>
+      <file>$PROJ_DIR$\Synchronous_comm.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\RX_MHZ_915\Exe\Synchronous_comm.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 9 8 0 2 5 6 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\RX_MHZ_915\Obj\Synchronous_comm.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 3 4 12 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_pmm.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 11 10 21 23 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 10 21 23 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RfRegSettings_RX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RF1A.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 24 21 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 24 21 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Synchronous_comm_RX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 5</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>TX_MHZ_868</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.r43</file>
+      <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+      <file>$TOOLKIT_DIR$\config\lnkCC430F5137.xcl</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\hal_pmm.r43</file>
+      <file>$TOOLKIT_DIR$\inc\cc430f5137.h</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\RF1A.r43</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\RfRegSettings_TX.r43</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\Synchronous_comm_TX.r43</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\hal_pmm.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\RF1A.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\RfRegSettings_TX.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\Synchronous_comm_TX.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Exe\Synchronous_comm.d43</file>
+      <file>$PROJ_DIR$\TX_MHZ_868\Obj\Synchronous_comm.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.c</file>
+      <file>$PROJ_DIR$\HAL\RfRegSettings_TX.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_RX.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_TX.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430x513x.h</file>
+      <file>$PROJ_DIR$\Synchronous_comm.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\TX_MHZ_868\Exe\Synchronous_comm.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 2 1 5 6 7 3 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\TX_MHZ_868\Obj\Synchronous_comm.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 9 10 11 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_pmm.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 14 4 21 23 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14 4 21 23 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RF1A.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 5</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 24 21 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 24 21 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RfRegSettings_TX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Synchronous_comm_TX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>TX_MHZ_915</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.r43</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\RfRegSettings_TX.r43</file>
+      <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\Synchronous_comm_TX.r43</file>
+      <file>$TOOLKIT_DIR$\config\lnkCC430F5137.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\cc430f5137.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.c</file>
+      <file>$PROJ_DIR$\HAL\RfRegSettings_TX.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_RX.c</file>
+      <file>$PROJ_DIR$\Synchronous_comm_TX.c</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\hal_pmm.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\Synchronous_comm_TX.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\RF1A.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\RF1A.r43</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\Synchronous_comm.pbd</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\RfRegSettings_TX.pbi</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Obj\hal_pmm.r43</file>
+      <file>$PROJ_DIR$\TX_MHZ_915\Exe\Synchronous_comm.d43</file>
+      <file>$PROJ_DIR$\HAL\RF1A.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430x513x.h</file>
+      <file>$PROJ_DIR$\Synchronous_comm.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_pmm.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 5 21 23 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 5 21 23 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RF1A.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 24 21 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 24 21 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RfRegSettings_TX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Synchronous_comm_TX.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 24 21 23 20 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\TX_MHZ_915\Obj\Synchronous_comm.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 14 17 13 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\TX_MHZ_915\Exe\Synchronous_comm.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 4 2 15 1 3 18 0</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+</project>
+
+

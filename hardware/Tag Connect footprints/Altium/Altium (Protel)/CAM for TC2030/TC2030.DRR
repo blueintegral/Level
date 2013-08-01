@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: TC2030.PCB   18-Jun-2009  12:18:34
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : TopLayer to BottomLayer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        35mil (0.889mm)          6         NPTH   2.78 Inch (70.69 mm)
+T2        93mil (2.3622mm)         4         NPTH   1.80 Inch (45.60 mm)
+---------------------------------------------------------------------------
+Totals                             10               4.58 Inch (116.29 mm)
+
+Total Processing Time : 00:00:00

@@ -1,0 +1,9 @@
+[Design Root]
+Version=1.0.0
+[Directory]
+TC2030.pfp=PCBLIB
+TC2030.PCB=PCB
+[TC2030.pfp]
+Editor Kind=PCBLIB
+[TC2030.PCB]
+Editor Kind=PCB

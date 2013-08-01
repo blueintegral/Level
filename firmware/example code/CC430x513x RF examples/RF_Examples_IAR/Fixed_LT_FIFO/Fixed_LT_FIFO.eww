@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\..\Asynchronous_comm\Asynchronous_comm.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\Fixed_GT_FIFO\Fixed_GT_FIFO.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Fixed_LT_FIFO.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\Synchronous_comm\Synchronous_comm.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\Variable_GT_FIFO\Variable_GT_FIFO.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\Variable_LT_FIFO\Variable_LT_FIFO.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

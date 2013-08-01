@@ -1,0 +1,1 @@
+"./HAL/hal_pmm.obj" "./HAL/hal_UCS.obj" "./HAL/RfRegSettings.obj" "./HAL/RF1A.obj" "./RF_Toggle_LED_Demo.obj" -l"libc.a" "../lnk_cc430f5137.cmd" 

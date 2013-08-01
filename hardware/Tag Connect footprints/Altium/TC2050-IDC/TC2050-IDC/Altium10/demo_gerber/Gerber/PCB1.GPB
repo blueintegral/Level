@@ -1,0 +1,8 @@
+%FSLAX25Y25*%
+%MOIN*%
+G70*
+G01*
+G75*
+G04 Layer_Color=255*
+%ADD10C,0.03100*%
+M02*

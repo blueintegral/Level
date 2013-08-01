@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1097051240</fileChecksum>
+  <configuration>
+    <name>MHZ_868</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\config\lnkCC430F5137.xcl</file>
+      <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.r43</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430x513x.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430f5137.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\HAL\hal_UCS.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+      <file>$PROJ_DIR$\HAL\hal_macros.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\RF_Toggle_LED_Demo.h</file>
+      <file>$PROJ_DIR$\HAL\RF1A.h</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\hal_UCS.r43</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\RF_Toggle_LED_Demo.r43</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\hal_UCS.pbi</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\hal_pmm.pbi</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\hal_pmm.r43</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\RF1A.r43</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\RF1A.pbi</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\RfRegSettings.r43</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\RF_Toggle_LED_Demo.pbi</file>
+      <file>$PROJ_DIR$\MHZ_868\Exe\Variable_GT_FIFO.d43</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\Variable_GT_FIFO.pbd</file>
+      <file>$PROJ_DIR$\MHZ_868\Obj\RfRegSettings.pbi</file>
+      <file>$PROJ_DIR$\HAL\hal_UCS.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.c</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.c</file>
+      <file>$PROJ_DIR$\HAL\RfRegSettings.c</file>
+      <file>$PROJ_DIR$\RF_Toggle_LED_Demo.c</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\MHZ_868\Exe\Variable_GT_FIFO.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 0 1 26 22 28 21 25 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MHZ_868\Obj\Variable_GT_FIFO.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 27 29 32 23 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_UCS.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 21</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 6 8 9 10 12 7 13 16 3 15 18 17 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 6 8 9 10 12 7 13 16 15 18 17 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RF1A.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 4 8 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 4 8 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_pmm.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 25</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 6 8 9 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 6 8 9 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RfRegSettings.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 28</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\RF_Toggle_LED_Demo.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 19 4 8 9 20 11 10 12 7 13 16 3 15 18 17 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 4 8 9 20 11 10 12 7 13 16 15 18 17 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 30</file>
+        </tool>
+      </outputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>MHZ_915</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\config\lnkCC430F5137.xcl</file>
+      <file>$TOOLKIT_DIR$\config\multiplier32_loc2.xcl</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.r43</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430x513x.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\inc\cc430f5137.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\HAL\hal_UCS.h</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+      <file>$PROJ_DIR$\HAL\hal_macros.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\RF_Toggle_LED_Demo.h</file>
+      <file>$PROJ_DIR$\HAL\RF1A.h</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\Variable_GT_FIFO.pbd</file>
+      <file>$PROJ_DIR$\MHZ_915\Exe\Variable_GT_FIFO.d43</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\RF_Toggle_LED_Demo.pbi</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\RfRegSettings.pbi</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\RF1A.pbi</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\hal_UCS.pbi</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\hal_pmm.pbi</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\RF_Toggle_LED_Demo.r43</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\RfRegSettings.r43</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\RF1A.r43</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\hal_UCS.r43</file>
+      <file>$PROJ_DIR$\MHZ_915\Obj\hal_pmm.r43</file>
+      <file>$PROJ_DIR$\HAL\hal_UCS.c</file>
+      <file>$PROJ_DIR$\HAL\RF1A.c</file>
+      <file>$PROJ_DIR$\HAL\hal_pmm.c</file>
+      <file>$PROJ_DIR$\HAL\RfRegSettings.c</file>
+      <file>$PROJ_DIR$\RF_Toggle_LED_Demo.c</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\MHZ_915\Obj\Variable_GT_FIFO.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 25 23 24 26 27</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MHZ_915\Exe\Variable_GT_FIFO.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 0 1 30 28 29 31 32 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_UCS.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 6 8 9 10 12 7 13 16 3 15 18 17 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 6 8 9 10 12 7 13 16 15 18 17 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RF1A.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 4 8 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 4 8 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\hal_pmm.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 32</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 6 8 9 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 6 8 9 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\HAL\RfRegSettings.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\RF_Toggle_LED_Demo.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 28</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 19 4 8 9 20 11 10 12 7 13 16 3 15 18 17 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 4 8 9 20 11 10 12 7 13 16 15 18 17 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 22</file>
+        </tool>
+      </outputs>
+    </file>
+  </configuration>
+</project>
+
+

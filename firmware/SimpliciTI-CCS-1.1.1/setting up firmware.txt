@@ -1,0 +1,2 @@
+==Setting up firmware ==
+In CCS, go to Window->Preferences->General->Workspace->Linked Resources and make a new variable called DEV_ROOT that points to the main firmware folder.
