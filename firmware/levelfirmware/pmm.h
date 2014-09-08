@@ -1,3 +1,12 @@
+/*
+ * pmm.h
+ *
+ *  Created on: Sep 7, 2014
+ *      Author: hunter
+ */
+
+#ifndef PMM_H_
+#define PMM_H_
 //****************************************************************************//
 // Function Library for setting the PMM (Power Management Module)
 //    File: hal_pmm.h
@@ -52,3 +61,7 @@ unsigned int SetVCoreUp (unsigned char level);
 unsigned int SetVCoreDown (unsigned char level);
 
 #endif /* __PMM */
+
+
+
+#endif /* PMM_H_ */

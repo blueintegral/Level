@@ -1,3 +1,12 @@
+/*
+ * RF1A.h
+ *
+ *  Created on: Sep 7, 2014
+ *      Author: hunter
+ */
+
+#ifndef RF1A_H_
+#define RF1A_H_
 
 /* ------------------------------------------------------------------------------------------------
  *                                          Defines
@@ -55,4 +64,8 @@ void WriteBurstReg(unsigned char addr, unsigned char *buffer, unsigned char coun
 unsigned char ReadSingleReg(unsigned char addr);
 void ReadBurstReg(unsigned char addr, unsigned char *buffer, unsigned char count);
 void WriteSinglePATable(unsigned char value);
-void WriteBurstPATable(unsigned char *buffer, unsigned char count); 
+void WriteBurstPATable(unsigned char *buffer, unsigned char count);
+
+
+
+#endif /* RF1A_H_ */

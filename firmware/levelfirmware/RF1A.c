@@ -1,5 +1,12 @@
+/*
+ * RF1A.c
+ *
+ *  Created on: Sep 7, 2014
+ *      Author: hunter
+ */
+
 #include "RF1A.h"
-#include "cc430x613x.h"
+#include "cc430x513x.h"
 
 // *****************************************************************************
 // @fn          Strobe
@@ -11,40 +18,40 @@ unsigned char Strobe(unsigned char strobe)
 {
   unsigned char statusByte = 0;
   unsigned int  gdo_state;
-  
-  // Check for valid strobe command 
+
+  // Check for valid strobe command
   if((strobe == 0xBD) || ((strobe >= RF_SRES) && (strobe <= RF_SNOP)))
   {
-    // Clear the Status read flag 
-    RF1AIFCTL1 &= ~(RFSTATIFG);    
-    
+    // Clear the Status read flag
+    RF1AIFCTL1 &= ~(RFSTATIFG);
+
     // Wait for radio to be ready for next instruction
     while( !(RF1AIFCTL1 & RFINSTRIFG));
-    
+
     // Write the strobe instruction
     if ((strobe > RF_SRES) && (strobe < RF_SNOP))
     {
       gdo_state = ReadSingleReg(IOCFG2);    // buffer IOCFG2 state
       WriteSingleReg(IOCFG2, 0x29);         // chip-ready to GDO2
-      
-      RF1AINSTRB = strobe; 
+
+      RF1AINSTRB = strobe;
       if ( (RF1AIN & 0x04)== 0x04 )           // chip at sleep mode
       {
         if ( (strobe == RF_SXOFF) || (strobe == RF_SPWD) || (strobe == RF_SWOR) ) { }
-        else  	
+        else
         {
           while ((RF1AIN & 0x04)== 0x04);     // chip-ready ?
           // Delay for ~810usec at 1.05MHz CPU clock, see erratum RF1A7
-          __delay_cycles(850);	            
+          __delay_cycles(850);
         }
       }
       WriteSingleReg(IOCFG2, gdo_state);    // restore IOCFG2 setting
-    
+
       while( !(RF1AIFCTL1 & RFSTATIFG) );
     }
     else		                    // chip active mode (SRES)
-    {	
-      RF1AINSTRB = strobe; 	   
+    {
+      RF1AINSTRB = strobe;
     }
     statusByte = RF1ASTATB;
   }
@@ -60,15 +67,15 @@ unsigned char Strobe(unsigned char strobe)
 unsigned char ReadSingleReg(unsigned char addr)
 {
   unsigned char data_out;
-  
-  // Check for valid configuration register address, 0x3E refers to PATABLE 
+
+  // Check for valid configuration register address, 0x3E refers to PATABLE
   if ((addr <= 0x2E) || (addr == 0x3E))
     // Send address + Instruction + 1 dummy byte (auto-read)
-    RF1AINSTR1B = (addr | RF_SNGLREGRD);    
+    RF1AINSTR1B = (addr | RF_SNGLREGRD);
   else
     // Send address + Instruction + 1 dummy byte (auto-read)
-    RF1AINSTR1B = (addr | RF_STATREGRD);    
-  
+    RF1AINSTR1B = (addr | RF_STATREGRD);
+
   while (!(RF1AIFCTL1 & RFDOUTIFG) );
   data_out = RF1ADOUTB;                    // Read data and clears the RFDOUTIFG
 
@@ -83,15 +90,15 @@ unsigned char ReadSingleReg(unsigned char addr)
 // @return      none
 // *****************************************************************************
 void WriteSingleReg(unsigned char addr, unsigned char value)
-{   
+{
   while (!(RF1AIFCTL1 & RFINSTRIFG));       // Wait for the Radio to be ready for next instruction
   RF1AINSTRB = (addr | RF_SNGLREGWR);	    // Send address + Instruction
 
-  RF1ADINB = value; 			    // Write data in 
+  RF1ADINB = value; 			    // Write data in
 
-  __no_operation(); 
+  __no_operation();
 }
-        
+
 // *****************************************************************************
 // @fn          ReadBurstReg
 // @brief       Read multiple bytes to the radio registers
@@ -106,7 +113,7 @@ void ReadBurstReg(unsigned char addr, unsigned char *buffer, unsigned char count
   if(count > 0)
   {
     while (!(RF1AIFCTL1 & RFINSTRIFG));       // Wait for INSTRIFG
-    RF1AINSTR1B = (addr | RF_REGRD);          // Send addr of first conf. reg. to be read 
+    RF1AINSTR1B = (addr | RF_REGRD);          // Send addr of first conf. reg. to be read
                                               // ... and the burst-register read instruction
     for (i = 0; i < (count-1); i++)
     {
@@ -114,9 +121,9 @@ void ReadBurstReg(unsigned char addr, unsigned char *buffer, unsigned char count
       buffer[i] = RF1ADOUT1B;                 // Read DOUT from Radio Core + clears RFDOUTIFG
                                               // Also initiates auo-read for next DOUT byte
     }
-    buffer[count-1] = RF1ADOUT0B;             // Store the last DOUT from Radio Core  
+    buffer[count-1] = RF1ADOUT0B;             // Store the last DOUT from Radio Core
   }
-}  
+}
 
 // *****************************************************************************
 // @fn          WriteBurstReg
@@ -127,20 +134,20 @@ void ReadBurstReg(unsigned char addr, unsigned char *buffer, unsigned char count
 // @return      none
 // *****************************************************************************
 void WriteBurstReg(unsigned char addr, unsigned char *buffer, unsigned char count)
-{  
+{
   unsigned char i;
 
   if(count > 0)
   {
     while (!(RF1AIFCTL1 & RFINSTRIFG));       // Wait for the Radio to be ready for next instruction
     RF1AINSTRW = ((addr | RF_REGWR)<<8 ) + buffer[0]; // Send address + Instruction
-  
+
     for (i = 1; i < count; i++)
     {
       RF1ADINB = buffer[i];                   // Send data
       while (!(RFDINIFG & RF1AIFCTL1));       // Wait for TX to finish
-    } 
-    i = RF1ADOUTB;                            // Reset RFDOUTIFG flag which contains status byte  
+    }
+    i = RF1ADOUTB;                            // Reset RFDOUTIFG flag which contains status byte
   }
 }
 
@@ -210,32 +217,33 @@ void WriteSinglePATable(unsigned char value)
 {
   while( !(RF1AIFCTL1 & RFINSTRIFG));
   RF1AINSTRW = 0x3E00 + value;              // PA Table single write
-  
+
   while( !(RF1AIFCTL1 & RFINSTRIFG));
   RF1AINSTRB = RF_SNOP;                     // reset PA_Table pointer
 }
 
 // *****************************************************************************
 // @fn          WritePATable
-// @brief       Write to multiple locations in power table 
-// @param       unsigned char *buffer	Pointer to the table of values to be written 
+// @brief       Write to multiple locations in power table
+// @param       unsigned char *buffer	Pointer to the table of values to be written
 // @param       unsigned char count	Number of values to be written
 // @return      none
 // *****************************************************************************
 void WriteBurstPATable(unsigned char *buffer, unsigned char count)
 {
-  volatile char i = 0; 
-  
+  volatile char i = 0;
+
   while( !(RF1AIFCTL1 & RFINSTRIFG));
-  RF1AINSTRW = 0x7E00 + buffer[i];          // PA Table burst write   
+  RF1AINSTRW = 0x7E00 + buffer[i];          // PA Table burst write
 
   for (i = 1; i < count; i++)
   {
     RF1ADINB = buffer[i];                   // Send data
     while (!(RFDINIFG & RF1AIFCTL1));       // Wait for TX to finish
-  } 
+  }
   i = RF1ADOUTB;                            // Reset RFDOUTIFG flag which contains status byte
 
   while( !(RF1AIFCTL1 & RFINSTRIFG));
   RF1AINSTRB = RF_SNOP;                     // reset PA Table pointer
 }
+

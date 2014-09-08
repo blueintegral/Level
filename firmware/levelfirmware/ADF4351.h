@@ -1,3 +1,13 @@
+/*
+ * ADF4351.h
+ *
+ *  Created on: Sep 7, 2014
+ *      Author: hunter
+ */
+
+#ifndef ADF4351_H_
+#define ADF4351_H_
+
 //#include "ADF4350_IO.h"
 
 #define PLL_SET_LE()		P1OUT |= BIT0	//P2.0->LE for dev board, P1.0->LE for our board
@@ -161,3 +171,7 @@ void PLL_set_frq (int freq)
 	PLL_PowUp();
 }
 
+
+
+
+#endif /* ADF4351_H_ */

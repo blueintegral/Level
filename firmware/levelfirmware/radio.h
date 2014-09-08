@@ -1,5 +1,14 @@
+/*
+ * radio.h
+ *
+ *  Created on: Sep 7, 2014
+ *      Author: hunter
+ */
 
-#include "cc430x613x.h"
+#ifndef RADIO_H_
+#define RADIO_H_
+
+#include "cc430x513x.h"
 #include "RF1A.h"
 #include "pmm.h"
 #include <stdio.h>
@@ -266,3 +275,7 @@ int fputs(const char *_ptr, register FILE *_fp)
 //
 //		return 0;
 //}
+
+
+
+#endif /* RADIO_H_ */

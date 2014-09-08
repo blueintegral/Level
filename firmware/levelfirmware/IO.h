@@ -1,3 +1,12 @@
+/*
+ * IO.h
+ *
+ *  Created on: Sep 7, 2014
+ *      Author: hunter
+ */
+
+#ifndef IO_H_
+#define IO_H_
 
 void MCU_IO_set()
 {
@@ -6,3 +15,7 @@ void MCU_IO_set()
      P2DIR = 0xFF; // Set ALL the pins to output!!
      P1DIR = 0xFF; //
 }
+
+
+
+#endif /* IO_H_ */

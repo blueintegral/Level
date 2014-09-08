@@ -1,3 +1,4 @@
+
 //****************************************************************************//
 // Function Library for setting the PMM (Power Management Module)
 //    File: hal_pmm.c
@@ -66,7 +67,7 @@
 * You may not use the Program in non-TI devices.
 * ********************************************************* */
 
-#include "cc430f6137.h"
+#include "cc430f5137.h"
 #include "pmm.h"
 
 #define _HAL_PMM_DISABLE_SVML_
@@ -142,7 +143,7 @@ unsigned int SetVCoreUp (unsigned char level)
   	PMMIFG &= ~(SVMHVLRIFG | SVMHIFG | SVSMHDLYIFG | SVMLVLRIFG | SVMLIFG | SVSMLDLYIFG);
   	// backup PMM-Interrupt-Register
   	PMMRIE = PMMRIE_backup;
-  	
+
   	// Lock PMM registers for write access
   	PMMCTL0_H = 0x00;
   	return PMM_STATUS_ERROR;                       // return: voltage not set
@@ -215,7 +216,7 @@ unsigned int SetVCoreDown (unsigned char level)
 // Disable SVS/SVM Low
 // Disable full-performance mode to save energy
   SVSMLCTL &= ~(_HAL_PMM_DISABLE_SVSL_+_HAL_PMM_DISABLE_SVML_+_HAL_PMM_SVSFP );
-	
+
   // Clear all Flags
   PMMIFG &= ~(SVMHVLRIFG | SVMHIFG | SVSMHDLYIFG | SVMLVLRIFG | SVMLIFG | SVSMLDLYIFG);
   // backup PMM-Interrupt-Register
