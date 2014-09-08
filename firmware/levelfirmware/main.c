@@ -70,7 +70,7 @@ int main(void) {
      * ACLK = ~32.768kHz, MCLK = SMCLK = DCO ~ 1048kHz
      *
      * If the slave (aka level) is in debug mode, the reset signal from the master will conflict with the slave's
-     * JTAG. To work around, use IAR's "Release JTAG on Go" on the slave device. If breakpoints are set in the slave RX
+     * JTAG. To work around, use IAR's "Release JTAG on Go" or CCS's "Run Free" on the slave device. If breakpoints are set in the slave RX
      * ISR, the master must be stopped to avoice overrunning the slave RXBUF.
      *
      */
@@ -79,25 +79,25 @@ int main(void) {
     //                 -----------------
     //            /|\ |                 |
     //             |  |                 |
-    //    Master---+->|RST          P1.0|-> LED
+    //    Master---+->|RST          P2.2|-> LED
     //                |                 |
-    //                |             P2.0|-> Data Out (UCA0SIMO)
+    //                |             P1.4|-> Data Out (UCA0SIMO)
     //                |                 |
-    //                |             P2.2|<- Data In (UCA0SOMI)
+    //                |             P2.7|<- Data In (UCA0SOMI)
     //                |                 |
-    //                |             P2.4|-> Serial Clock Out (UCA0CLK)
+    //                |             P1.3|-> Serial Clock Out (UCA0CLK)
 
-    while(!(P2IN&BIT4));                      // If clock sig from mstr stays low,
+    while(!(P1IN&BIT3));                      // If clock sig from mstr stays low,
                                                // it is not yet in SPI mode
 
      PMAPPWD = 0x02D52;                        // Get write-access to port mapping regs
-     P2MAP0 = PM_UCA0SIMO;                     // Map UCA0SIMO output to P2.0
-     P2MAP2 = PM_UCA0SOMI;                     // Map UCA0SOMI output to P2.2
-     P2MAP4 = PM_UCA0CLK;                      // Map UCA0CLK output to P2.4
+     P1MAP4 = PM_UCA0SIMO;                     // Map UCA0SIMO output to P1.4
+     P2MAP7 = PM_UCA0SOMI;                     // Map UCA0SOMI output to P2.7
+     P1MAP3 = PM_UCA0CLK;                      // Map UCA0CLK output to P1.3
      PMAPPWD = 0;                              // Lock port mapping registers
 
-     P2DIR |= BIT0 + BIT2 + BIT4;              // ACLK, MCLK, SMCLK set out to pins
-     P2SEL |= BIT0 + BIT2 + BIT4;              // P2.0,2,4 for debugging purposes
+     P3DIR |= BIT0 + BIT1 + BIT2;              // ACLK, MCLK, SMCLK set out to pins
+     P3SEL |= BIT0 + BIT1 + BIT2;              // P3.0,1,2 for debugging purposes
 
      UCA0CTL1 |= UCSWRST;                      // **Put state machine in reset**
      UCA0CTL0 |= UCSYNC+UCCKPL+UCMSB;          // 3-pin, 8-bit SPI slave,
@@ -106,6 +106,12 @@ int main(void) {
      UCA0IE |= UCRXIE;                         // Enable USCI_A0 RX interrupt
 
      __bis_SR_register(LPM4_bits + GIE);       // Enter LPM4, enable interrupts
+
+
+     while(1){
+     printf("RXBUF is 0x%X\n\r", UCA0RXBUF);
+     delay(1000);
+     }
 
 
 
@@ -119,7 +125,6 @@ int main(void) {
 	return 0;
 }
 
-
 // Echo character
 #if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
 #pragma vector=USCI_A0_VECTOR
@@ -130,15 +135,18 @@ void __attribute__ ((interrupt(USCI_A0_VECTOR))) USCI_A0_ISR (void)
 #error Compiler not supported!
 #endif
 {
+  printf("Got an interrupt\r\n");
   switch(__even_in_range(UCA0IV,4))
   {
     case 0:break;                             // Vector 0 - no interrupt
     case 2:                                   // Vector 2 - RXIFG
       while (!(UCA0IFG&UCTXIFG));             // USCI_A0 TX buffer ready?
       UCA0TXBUF = UCA0RXBUF;
+      printf("Sent a byte\r\n");
       break;
     case 4:break;                             // Vector 4 - TXIFG
     default: break;
   }
 }
+
 
