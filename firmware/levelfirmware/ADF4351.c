@@ -1,4 +1,13 @@
+/*
+ * ADF4351.c
+ *
+ *  Created on: Sep 21, 2014
+ *      Author: hunter
+ */
+
+
 //#include "ADF4350_IO.h"
+#include "cc430x513x.h"
 
 #define PLL_SET_LE()		P1OUT |= BIT0	//P2.0->LE for dev board, P1.0->LE for our board
 #define PLL_CLR_LE()		P1OUT &=~BIT0
@@ -160,4 +169,6 @@ void PLL_set_frq (int freq)
 	WriteToADF4350(4,PLL_Reg_buf0);		//(DB30-15:F0H)INT value is 240;
 	PLL_PowUp();
 }
+
+
 

@@ -1,6 +1,6 @@
 //Level firmware
 //Author: Hunter Scott
-//License: GPL v3
+//License: MIT
 
 #include <msp430.h> 
 #include "cc430x513x.h"
@@ -108,10 +108,10 @@ int main(void) {
      __bis_SR_register(LPM4_bits + GIE);       // Enter LPM4, enable interrupts
 
 
-     while(1){
-     printf("RXBUF is 0x%X\n\r", UCA0RXBUF);
-     delay(1000);
-     }
+//     while(1){
+//     printf("RXBUF is 0x%X\n\r", UCA0RXBUF);
+//     delay(1000);
+//     }
 
 
 
