@@ -10,7 +10,7 @@
 //#include "fix_fft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include "math.h" //not original library version, hacky reimplemented version since mspgcc lib doesn't have the real one
 
 
 //*****************************************************
@@ -49,6 +49,7 @@ void InitSys()
 
 int putchar(int c){
 	//replace with output to serial/SPI UART
+	return 0;
 }
 
 int main(void) {
@@ -56,7 +57,7 @@ int main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 	MCU_IO_set();
     InitSys();
-    delay (20);
+    delay(20);
     // PLL_set_frq(); //Program VCO
 
     //Get radio ready for use/////

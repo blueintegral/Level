@@ -32,7 +32,7 @@ void InitRadio(void);
 #define  CRC_OK             (BIT7)          // CRC_OK bit
 #define  PATABLE_VAL        (0x51)          // 0 dBm output
 
-RF_SETTINGS rfSettings;
+extern RF_SETTINGS rfSettings;
 
 unsigned char packetReceived;
 unsigned char packetTransmit;

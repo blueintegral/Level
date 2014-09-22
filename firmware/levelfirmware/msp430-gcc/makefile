@@ -9,7 +9,7 @@ TARGET     = level
 MCU        = cc430f5137
 # List all the source files here
 # eg if you have a source file foo.c then list it here
-SOURCES = main.c pmm.c RF1A.c RfRegSettings.c
+SOURCES = main.c pmm.c RF1A.c RfRegSettings.c ADF4351.c HAL.c RfRegSettings.c math.c
 # Include are located in the Include directory
 INCLUDES = -IInclude
 # Add or subtract whatever MSPGCC flags you want. There are plenty more
