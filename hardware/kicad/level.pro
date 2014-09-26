@@ -1,4 +1,4 @@
-update=9/19/2014 8:59:32 PM
+update=9/25/2014 11:46:23 PM
 version=1
 last_client=eeschema
 [cvpcb]
@@ -85,3 +85,4 @@ LibName28=opto
 LibName29=atmel
 LibName30=contrib
 LibName31=valves
+LibName32=level

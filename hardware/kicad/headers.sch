@@ -30,6 +30,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:level
 LIBS:level-cache
 EELAYER 27 0
 EELAYER END
@@ -37,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 9 9
 Title ""
-Date "20 sep 2014"
+Date "26 sep 2014"
 Rev ""
 Comp ""
 Comment1 ""

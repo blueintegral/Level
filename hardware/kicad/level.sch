@@ -30,6 +30,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:level
 LIBS:level-cache
 EELAYER 27 0
 EELAYER END
@@ -37,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 9
 Title ""
-Date "20 sep 2014"
+Date "26 sep 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -62,12 +63,16 @@ S 5150 4650 1750 200
 U 541CD787
 F0 "LO tap" 50
 F1 "LO_tap.sch" 50
+F2 "LO" B R 6900 4750 60 
+F3 "LO_TAP" B L 5150 4750 60 
 $EndSheet
 $Sheet
-S 5350 3200 1800 250 
+S 5350 3200 1650 200 
 U 541CD79C
 F0 "CC430 tap" 50
 F1 "CC430_tap.sch" 50
+F2 "CC430_TAP" B L 5350 3300 60 
+F3 "MIX_IN" B R 7000 3300 60 
 $EndSheet
 $Sheet
 S 7300 4600 1400 350 
@@ -97,6 +102,5 @@ F3 "SO2" I R 1950 2500 60
 F4 "SI2" O R 1950 2600 60 
 F5 "LE2" B R 1950 2700 60 
 F6 "GPIO1" B R 1950 2800 60 
-F7 "GPIO2" B R 1950 2900 60 
 $EndSheet
 $EndSCHEMATC
