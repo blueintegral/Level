@@ -36,9 +36,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 9
+Sheet 8 9
 Title ""
-Date "26 sep 2014"
+Date "27 sep 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -251,7 +251,7 @@ LE2
 Text HLabel 7050 3400 0    60   BiDi ~ 0
 GPIO1
 Text HLabel 7050 3500 0    60   BiDi ~ 0
-GPIO2
+GPIO0
 Wire Wire Line
 	7050 3500 7200 3500
 Wire Wire Line
